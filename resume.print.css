@@ -1,0 +1,81 @@
+/* General reset for printing */ 
+
+.footer-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+.footer-buttons button,
+.footer-buttons .btn-cancel {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Print button style */
+.btn-print {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-print:hover {
+  background-color: #45a049;
+}
+
+/* Cancel button style */
+.btn-cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #d32f2f;
+}
+
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+    margin: 0;
+  }
+  .paper {
+    width: 100%;
+    min-height: auto;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20mm;
+  }
+  .header h1 {
+    font-size: 22px;
+  }
+  .header p {
+    font-size: 12px;
+  }
+  .section h2 {
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+  }
+  .section ul {
+    list-style: none;
+    padding-left: 15px;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm;
+  }

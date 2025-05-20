@@ -1,0 +1,116 @@
+/* Resume design */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background: #a0cbff; /* Light gray like a desk */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+.paper {
+  background: hsl(230, 100%, 77%);
+  width: 794px;         /* A4 width at 96dpi */
+  min-height: 1123px;   /* A4 height at 96dpi */
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.header img {
+  max-width: 100px;
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+.header h1 {
+  font-size: 28px;
+  color: #32418C;
+}
+.header p {
+  font-size: 14px;
+  color: #56a5ff;
+}
+.section {
+  margin-top: 30px;
+  page-break-inside: avoid;
+}
+.section h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #003A70;
+  border-bottom: 2px solid #32418C;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+.section p,
+.section li {
+  font-size: 14px;
+  color: #333;
+}
+.section ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+.section ul li {
+  margin-bottom: 6px;
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+.skills-grid div {
+  background: #72d3ff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 20px;
+ }
+
+.footer-buttons button,
+.footer-buttons .btn-cancel {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Print button style */
+.btn-print {
+  background-color: turquoise;
+  color: white;
+}
+
+.btn-print:hover {
+  background-color: cyan;
+}
+
+/* Cancel button style */
+.btn-cancel {
+  background-color: blue;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: indigo;
+}
